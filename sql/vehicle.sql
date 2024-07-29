@@ -1,0 +1,16 @@
+create database vehicle;
+use vehicle;
+create table vehicle_info(id int,type_of_vehicle int,vehicle_name varchar(30),vehicle_price int,insurance int,constraint vehicle_price_chk check(vehicle_price>10000));
+alter table vehicle_info add constraint vehicle_name_uni unique(vehicle_name);
+alter table vehicle_info drop constraint vehicle_price_chk;
+alter table vehicle_info drop column type_of_vehicle;
+alter table vehicle_info add column type_of_vehicle varchar(30);
+desc vehicle_info;
+insert into vehicle_info values(1,'car',200000,2000,'sedan');
+insert into vehicle_info values(2,'bus',25000,3000,'minibus');
+insert into vehicle_info values(3,'bike',30000,4000,'touring');
+insert into vehicle_info values(4,'van',40000,5000,'panel van');
+insert into vehicle_info values(5,'truck',500000,6000,'mini truck');
+alter table vehicle_info add constraint id_pk primary key(id);
+alter table vehicle_info drop index vehicle_name_uni;
+select*from vehicle_info;

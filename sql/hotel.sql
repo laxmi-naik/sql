@@ -1,0 +1,14 @@
+create database hotel;
+use hotel;
+create table hotel_info(id int unique, hotel_name varchar(50), address  varchar(50), no_of_room int, room_rent int not null,no_of_workers int);
+alter table hotel_info add constraint room_rent_chk check(room_rent>200);
+alter table hotel_info drop  constraint id;
+desc hotel_info;
+insert into hotel_info values(1,'royal hotel', 'belagavi',10,500,20);
+insert into hotel_info values(2,'laxmi hotel', 'athani',15,1000,25);
+insert into hotel_info values(3,'divya hotel', 'bengaluru',20,1500,30);
+insert into hotel_info values(4,'samarth hotel', 'terdal',25,2000,35);
+insert into hotel_info values(5,'deva hotel', 'rajajinagar',30,2500,40);
+alter table hotel_info  add constraint hotel_name_pk primary key(hotel_name);
+alter table hotel_info drop constraint room_rent_chk ;
+select*from hotel_info;

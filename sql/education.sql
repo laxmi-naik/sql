@@ -1,0 +1,14 @@
+create database education;
+use education;
+create table education_info(university_id int unique, university_name varchar(50),college_id int,college_name varchar(50),branch_name varchar(20),no_of_student int);
+desc education_info;
+alter table education_info add constraint no_of_student_chk check(no_of_student>50);
+alter table education_info drop  constraint university_id;
+insert into education_info values(1,'VTU',201,'AITM','cs',60);
+insert into education_info values(2,'university of mysore',202,'rv','cs',70);
+insert into education_info values(3,'karnataka university',203,'git','ec',80);
+insert into education_info values(4,'bengaluru university',204,'jain','ai',90);
+insert into education_info values(6,'mangalore university',205,'kle','mech',100);
+alter table education_info add constraint college_name_pk primary key(college_name);
+alter table education_info drop constraint no_of_student_chk;
+select*from education_info;
