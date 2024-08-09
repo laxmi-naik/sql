@@ -1,0 +1,24 @@
+create database transactions;
+use transactions;
+create  table transactions(id int ,u_name varchar(50),amount int,t_date date,account_no bigint,t_type varchar(50));
+insert into transactions values(1,'laxmi',250,'2020-04-11',12458789,'purchase');
+insert into transactions values(2,'divya',150,'2021-04-11',3251178,'repayment');
+insert into transactions values(3,'swati',200,'2022-04-11',324595,'refund');
+insert into transactions values(4,'bhavya',250,'2023-04-11',325487,'purchase');
+insert into transactions values(5,'anu',100,'2024-04-11',319725,'repayment');
+insert into transactions values(6,'samarth',300,'2019-04-11',647958,'purchase');
+insert into transactions values(7,'lalitha',350,'2018-04-11',896521,'refund');
+insert into transactions values(8,'chanagond',400,'2017-04-11',785432,'repayment');
+insert into transactions values(9,'aly',450,'2016-04-11',369852,'purchase');
+insert into transactions values(10,'arjun',150,'2015-04-11',124587,'refund');
+insert into transactions values(11,'karan',250,'2014-04-11',258296,'repayment');
+insert into transactions values(12,'kiran',200,'2013-04-11',3254988,'purchase');
+insert into transactions values(13,'mahesh',500,'2012-04-11',875621,'refund');
+insert into transactions values(14,'vijya',550,'2011-04-11',561298,'repayment');
+insert into transactions values(15,'rahul',600,'2020-09-14',655498,'purchase');
+insert into transactions values(16,'jasmin',650,'2020-08-17',325698,'refund');
+insert into transactions values(17,'reem',700,'2020-07-18',789654,'repayment');
+insert into transactions values(18,'khavya',750,'2020-03-20',321456,'purchase');
+insert into transactions values(19,'tafseen',800,'2020-06-22',895623,'repayment');
+insert into transactions values(20,'vikas',560,'2020-05-24',124578,'refund');
+

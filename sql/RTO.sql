@@ -23,6 +23,8 @@ insert into LLR_info values(18,'khavya','2014-07-19','haveri',3579514862,'2019-0
 insert into LLR_info values(19,'akash','2015-07-19','chikkodi',124587956,'2020-04-11','2026-05-17','bike','pending','retake test');
 insert into LLR_info values(20,'iranna','2016-07-19','rabkavi',236544789,'2021-04-11','2024-05-17','car','passed','none');
 
+insert into LLR_info(LLR_ID,LLR_name)values(1,'laxmi')on duplicate key update  address='haveri';
+replace into LLR_info values(21,'vikas','2002-06-11','shegunshi',84561237,'2015-04-11','2025-05-17','bike','passed','none');
 
 
 create table LLR_TEST_INFO(TEST_ID int primary key,LLR_ID int,tester_name  varchar(50),age int,gender varchar(20),address varchar(50),contact_no bigint,test_date date,
@@ -48,6 +50,8 @@ insert into LLR_TEST_INFO values(417,17,'ranveer',35,'male','btm',357951486,'202
 insert into LLR_TEST_INFO values(418,18,'prem',36,'male','ram nagar',1593578452,'2026-05-14','fail','car','kushi');
 insert into LLR_TEST_INFO values(419,19,'priya',37,'female','avverhalli',321579846,'2027-05-14','pass','bike','shivu');
 insert into LLR_TEST_INFO values(420,20,'shreya',38,'female','athani',3254789615,'2028-05-14','fail','bike','ram');
+
+insert into LLR_info(LLR_ID,LLR_name)values(1,'laxmi')on duplicate key update  address='haveri';
  
  
  create table DRIVING_LICENCE_INFO(DL_id int primary key, TEST_ID int,LLR_ID int,u_name varchar(30),date_of_birth date,
@@ -74,6 +78,8 @@ insert into DRIVING_LICENCE_INFO values(317,417,17,'sana','2012-07-19','attigupp
 insert into DRIVING_LICENCE_INFO values(318,418,18,'khavya','2014-07-19','haveri',3579514862,'2019-04-11','2023-05-17','motorcycle');
 insert into DRIVING_LICENCE_INFO values(319,419,19,'akash','2015-07-19','chikkodi',124587956,'2020-04-11','2026-05-17','bike');
 insert into DRIVING_LICENCE_INFO values(320,420,20,'iranna','2016-07-19','rabkavi',236544789,'2021-04-11','2024-05-17','car');
+
+insert into LLR_info(LLR_ID,LLR_name)values(1,'laxmi')on duplicate key update  address='haveri';
  
  
  
@@ -101,5 +107,8 @@ insert into  DRIVING_LICENSE_TEST_INFO  values(317,'ranveer',35,'male','btm',357
 insert into  DRIVING_LICENSE_TEST_INFO  values(318,'prem',36,'male','ram nagar',1593578452,'2026-05-14','fail','car','kushi');
 insert into  DRIVING_LICENSE_TEST_INFO  values(319,'priya',37,'female','avverhalli',321579846,'2027-05-14','pass','bike','shivu');
 insert into  DRIVING_LICENSE_TEST_INFO  values(320,'shreya',38,'female','athani',3254789615,'2028-05-14','fail','bike','ram');
+select*from DRIVING_LICENSE_TEST_INFO;
+replace into  DRIVING_LICENSE_TEST_INFO  values(320,'suhas',39,'male','hrs layout',3214578951,'2028-06-14','pass','car','hanji');
+insert into LLR_info(DL_ID,tester_name)values(301,'laxmi')on duplicate key update  address='shegunshi';
  
 
